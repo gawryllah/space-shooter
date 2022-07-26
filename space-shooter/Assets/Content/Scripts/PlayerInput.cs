@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
@@ -19,16 +17,8 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKey(KeyCode.W) && transform.position.y < 4.75f)
-        {
-            transform.position += new Vector3(0, movmentSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.S) && transform.position.y > -4.75f)
-        {
-            transform.position += new Vector3(0, (movmentSpeed * Time.deltaTime) * -1);   
-        }
 
+        Move();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -40,10 +30,19 @@ public class PlayerInput : MonoBehaviour
 
     void shoot()
     {
-        GameObject respedBullet = Instantiate(bullet);
-        respedBullet.transform.position = transform.GetChild(0).position;
-        
+        GameObject respedBullet = Instantiate(bullet, transform.GetChild(0).position, Quaternion.identity);
         Destroy(respedBullet, 3f);
     }
-    
+
+    void Move()
+    {
+        if (Input.GetKey(KeyCode.W) && transform.position.y < 4.75f)
+        {
+            transform.position += new Vector3(0, movmentSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S) && transform.position.y > -4.75f)
+        {
+            transform.position += new Vector3(0, (movmentSpeed * Time.deltaTime) * -1);
+        }
+    }
 }

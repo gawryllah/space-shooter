@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public bool isGameOn;
+
     public TMP_Text scoreText;
     public TMP_Text hiScoreText;
     public GameObject gameOverUI;
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            isGameOn = true;
         }
     }
 
@@ -49,7 +52,8 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSecondsRealtime(randomDel);
-            spawnEnemy();
+            if(isGameOn)
+                spawnEnemy();
         }
     }
 
@@ -106,10 +110,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isGameOn = false;
         if (score > hiScore)
             saveScore();
         Time.timeScale = 0f;
         gameOverUI.SetActive(true);
+        StopCoroutine(spawner());
     }
 
     public void RestartLevel()

@@ -38,26 +38,6 @@ public class PlayerInput : MonoBehaviour
 
     }
 
-    /*
-    private IEnumerator shooting()
-    {
-        while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameObject respedBullet = Instantiate(bullet);
-                if (!respedBullet.GetComponent<BulletScript>().isDirSet) { 
-                    respedBullet.transform.position = transform.GetChild(0).position;
-                    respedBullet.transform.parent = transform.GetChild(1);
-                }
-                Destroy(respedBullet, 3f);
-                yield return new WaitForSecondsRealtime(0.5f);
-            }
-
-            yield return new WaitForSecondsRealtime(0.01f);
-        }
-    }
-    */
 
     void shoot()
     {

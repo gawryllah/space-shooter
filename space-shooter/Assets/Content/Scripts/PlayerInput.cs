@@ -12,11 +12,10 @@ public class PlayerInput : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         transform.position = new Vector3(-8.25f, 0f);
     }
-
     // Update is called once per frame
     void Update()
     {

@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     [SerializeField]
     float speed;
-    public bool isDirSet = false;
+
     // Start is called before the first frame update
     void Start()
     {

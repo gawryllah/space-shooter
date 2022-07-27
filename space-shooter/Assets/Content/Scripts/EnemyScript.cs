@@ -7,19 +7,27 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     bool canMove;
 
+
     BoxCollider2D boxCollider2D;
     // Start is called before the first frame update
     void Start()
     {
         canMove = true;
         boxCollider2D = GetComponent<BoxCollider2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (canMove)
-            transform.position -= new Vector3((speed * Time.deltaTime), 0f);
+            transform.position -= new Vector3((speed * Time.deltaTime) , 0f);
+
+        if(transform.position.x < -9.25f)
+        {
+            Destroy(transform.gameObject);
+            PlayerController.takeDmg();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,4 +45,5 @@ public class EnemyScript : MonoBehaviour
 
       
     }
+
 }

@@ -78,6 +78,8 @@ public class PlayerController : MonoBehaviour
     {
         health -= 1;
         UIManager.instance.DestroyHeart();
+        if (health <= 0)
+            GameManager.instance.GameOver();
     }
 
     private void turnOnEngine()

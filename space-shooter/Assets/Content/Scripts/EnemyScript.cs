@@ -11,8 +11,10 @@ public class EnemyScript : MonoBehaviour
     Animator animator;
 
     public GameObject explosionPrefab;
+    private GameObject explosion;
 
     private SpriteRenderer sr;
+   
 
 
 
@@ -52,8 +54,8 @@ public class EnemyScript : MonoBehaviour
             canMove = false;
             animator.enabled = false;
 
-            GameObject explosion = Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
-            Destroy(explosion.transform.gameObject, 2f);
+            explosion = Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
+            Destroy(explosion.transform.gameObject, 0.6f);
             StartCoroutine(fadeAway());
             
             
@@ -66,6 +68,7 @@ public class EnemyScript : MonoBehaviour
     {
         Color currColor = sr.color;
         float alpha = sr.color.a;
+
         while (sr.color.a > 0)
         {
             alpha -= 0.10f;

@@ -9,6 +9,9 @@ public class EnemyScript : MonoBehaviour
 
     Animator animator;
 
+    public GameObject explosionPrefab;
+
+
 
     PolygonCollider2D polygonCollider2d;
     // Start is called before the first frame update
@@ -44,6 +47,10 @@ public class EnemyScript : MonoBehaviour
             Destroy(collision.gameObject);
             canMove = false;
             animator.enabled = false;
+
+            GameObject explosion = Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
+            Destroy(explosion.transform.gameObject, 2f);
+            
             
 
             GameManager.instance.addPoint();
@@ -51,5 +58,7 @@ public class EnemyScript : MonoBehaviour
 
       
     }
+
+    
 
 }

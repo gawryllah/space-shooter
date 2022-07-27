@@ -7,13 +7,17 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     bool canMove;
 
+    Animator animator;
 
-    BoxCollider2D boxCollider2D;
+
+    PolygonCollider2D polygonCollider2d;
     // Start is called before the first frame update
     void Start()
     {
         canMove = true;
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        polygonCollider2d = GetComponent<PolygonCollider2D>();
+        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        animator = GetComponent<Animator>();
 
     }
 
@@ -36,9 +40,11 @@ public class EnemyScript : MonoBehaviour
         {
 
             Destroy(transform.gameObject, 1.25f);
-            boxCollider2D.enabled = false;
+            polygonCollider2d.enabled = false;
             Destroy(collision.gameObject);
             canMove = false;
+            animator.enabled = false;
+            
 
             GameManager.instance.addPoint();
         }

@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
     public void DestroyHeart()
     {
         int lastChildIndex = hearts.transform.childCount - 1;
-        Debug.Log(lastChildIndex);
+        //Debug.Log(lastChildIndex);
         Destroy(hearts.transform.GetChild(lastChildIndex).gameObject);
     }
 }

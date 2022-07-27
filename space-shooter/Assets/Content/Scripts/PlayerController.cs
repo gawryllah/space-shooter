@@ -13,11 +13,17 @@ public class PlayerController : MonoBehaviour
 
     public static int health;
 
+    public GameObject engine1;
+    public GameObject engine2;
+
+    private float onScale = 4.25f;
+    private float offScale = 3f;
+
 
     // Start is called before the first frame update
     private void Awake()
     {
-        transform.position = new Vector3(-8.25f, 0f);
+        transform.position = new Vector3(-7.4f, 0f);
         health = 3;
     }
     // Update is called once per frame
@@ -45,10 +51,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && transform.position.y < 4.75f)
         {
             transform.position += new Vector3(0, movmentSpeed * Time.deltaTime);
+            turnOnEngine();
         }
-        if (Input.GetKey(KeyCode.S) && transform.position.y > -4.75f)
+        else if (Input.GetKey(KeyCode.S) && transform.position.y > -4.75f)
         {
             transform.position -= new Vector3(0, (movmentSpeed * Time.deltaTime));
+            turnOnEngine();
+        }
+        else
+        {
+            turnOffEngine();
         }
     }
 
@@ -66,5 +78,17 @@ public class PlayerController : MonoBehaviour
     {
         health -= 1;
         UIManager.instance.DestroyHeart();
+    }
+
+    private void turnOnEngine()
+    {
+        engine1.transform.localScale = new Vector3(onScale, onScale, onScale);
+        engine2.transform.localScale = new Vector3(onScale, onScale, onScale);
+    }
+
+    private void turnOffEngine()
+    {
+        engine1.transform.localScale = new Vector3(offScale, offScale, offScale);
+        engine2.transform.localScale = new Vector3(offScale, offScale, offScale);
     }
 }

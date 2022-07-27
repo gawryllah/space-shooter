@@ -12,12 +12,6 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOn;
 
-    public TMP_Text scoreText;
-    public TMP_Text hiScoreText;
-    public GameObject gameOverUI;
-    public Button restartBtn;
-    public Button exitBtn;
-
     public GameObject enemyPrefab;
     public float maxRespHeight;
 
@@ -27,8 +21,8 @@ public class GameManager : MonoBehaviour
     private float randomDel;
     private float randomHeight;
 
-    private int score;
-    private int hiScore;
+    public int score;
+    public int hiScore;
 
     public float bgScrollingSpeed;
 
@@ -48,7 +42,7 @@ public class GameManager : MonoBehaviour
     void Start() {
 
 
-        gameOverUI.SetActive(false);
+
         setScore();
         StartCoroutine(spawner());
     }
@@ -89,7 +83,7 @@ public class GameManager : MonoBehaviour
     public void addPoint()
     {
         score += 1;
-        UpdateUI();
+        UIManager.instance.UpdateUI();
     }
 
     private void setScore()
@@ -103,7 +97,7 @@ public class GameManager : MonoBehaviour
             hiScore = 0;
         }
 
-        hiScoreText.text = $"HiScore: {hiScore}";
+        UIManager.instance.SetHiScore();
         score = 0;
     }
 
@@ -112,10 +106,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("SS-score", score);
     }
 
-    private void UpdateUI()
-    {
-        scoreText.text = $"Score: {score}";
-    }
 
 
     public void GameOver()
@@ -124,20 +114,11 @@ public class GameManager : MonoBehaviour
         if (score > hiScore)
             saveScore();
         Time.timeScale = 0f;
-        gameOverUI.SetActive(true);
+
+        UIManager.instance.ShowGameOverUI();
         StopCoroutine(spawner());
     }
 
-    public void RestartLevel()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
-    }
 
-    public void GameExit()
-    {
-        Debug.Log("Game is shutting down...");
-        Application.Quit();
-    }
 
 }

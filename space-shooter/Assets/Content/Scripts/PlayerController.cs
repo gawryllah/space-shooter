@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float movmentSpeed;
@@ -8,11 +8,14 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     GameObject bullet;
 
+    public static int health;
+
 
     // Start is called before the first frame update
     private void Awake()
     {
         transform.position = new Vector3(-8.25f, 0f);
+        health = 3;
     }
     // Update is called once per frame
     void Update()
@@ -44,5 +47,15 @@ public class PlayerInput : MonoBehaviour
         {
             transform.position -= new Vector3(0, (movmentSpeed * Time.deltaTime));
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy") || collision.gameObject.tag.Equals("Obstacle"))
+        {
+            GameManager.instance.GameOver();
+        }
+
+        
     }
 }

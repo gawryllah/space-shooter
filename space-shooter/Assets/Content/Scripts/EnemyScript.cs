@@ -35,9 +35,6 @@ public class EnemyScript : MonoBehaviour
             GameManager.instance.addPoint();
         }
 
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            GameManager.instance.GameOver();
-        }
+      
     }
 }

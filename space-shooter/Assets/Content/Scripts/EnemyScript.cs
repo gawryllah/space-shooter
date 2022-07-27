@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -11,6 +12,8 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject explosionPrefab;
 
+    private SpriteRenderer sr;
+
 
 
     PolygonCollider2D polygonCollider2d;
@@ -21,6 +24,7 @@ public class EnemyScript : MonoBehaviour
         polygonCollider2d = GetComponent<PolygonCollider2D>();
         transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
 
     }
 
@@ -50,15 +54,27 @@ public class EnemyScript : MonoBehaviour
 
             GameObject explosion = Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
             Destroy(explosion.transform.gameObject, 2f);
+            StartCoroutine(fadeAway());
             
             
 
             GameManager.instance.addPoint();
         }
-
-      
     }
 
-    
+    private IEnumerator fadeAway()
+    {
+        Color currColor = sr.color;
+        float alpha = sr.color.a;
+        while (sr.color.a > 0)
+        {
+            alpha -= 0.10f;
+            sr.color = new Color(currColor.r, currColor.g, currColor.g, alpha);
+            yield return new WaitForSecondsRealtime(0.015f);
+        }
+    }
+
+
+
 
 }

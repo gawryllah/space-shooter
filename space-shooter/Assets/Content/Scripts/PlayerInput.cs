@@ -42,7 +42,7 @@ public class PlayerInput : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S) && transform.position.y > -4.75f)
         {
-            transform.position += new Vector3(0, (movmentSpeed * Time.deltaTime) * -1);
+            transform.position -= new Vector3(0, (movmentSpeed * Time.deltaTime));
         }
     }
 }

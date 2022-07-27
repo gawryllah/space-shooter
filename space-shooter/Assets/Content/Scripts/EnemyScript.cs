@@ -19,7 +19,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         if (canMove)
-            transform.position += new Vector3(-1 * (speed * Time.deltaTime), 0f);
+            transform.position -= new Vector3((speed * Time.deltaTime), 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

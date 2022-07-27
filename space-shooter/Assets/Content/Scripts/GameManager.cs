@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
 
     public bool isGameOn;
 
@@ -28,6 +30,9 @@ public class GameManager : MonoBehaviour
     private int score;
     private int hiScore;
 
+    public float bgScrollingSpeed;
+
+
 
 
     private void Awake()
@@ -42,10 +47,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 
+
         gameOverUI.SetActive(false);
         setScore();
         StartCoroutine(spawner());
     }
+
+    
 
     private IEnumerator spawner()
     {
@@ -59,10 +67,12 @@ public class GameManager : MonoBehaviour
 
     void spawnEnemy()
     {
-        Instantiate(enemyPrefab, new Vector3(12, randomHeight), Quaternion.identity);
+        if (isGameOn) {
+            Instantiate(enemyPrefab, new Vector3(12, randomHeight), Quaternion.identity);
 
-        setRandomDelay();
-        setRandomHeight();
+            setRandomDelay();
+            setRandomHeight();
+        }
     }
 
     void setRandomDelay()
@@ -129,4 +139,5 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game is shutting down...");
         Application.Quit();
     }
+
 }

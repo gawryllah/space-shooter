@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
+    
+
     [SerializeField]
     float movmentSpeed;
 
@@ -57,5 +60,11 @@ public class PlayerController : MonoBehaviour
         }
 
         
+    }
+
+    public static void takeDmg()
+    {
+        health -= 1;
+        UIManager.instance.DestroyHeart();
     }
 }

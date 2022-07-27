@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public Button restartBtn;
     public Button exitBtn;
 
+    public GameObject hearts;
+
     private void Awake()
     {
         if (instance == null)
@@ -62,5 +64,12 @@ public class UIManager : MonoBehaviour
     public void ShowGameOverUI()
     {
         gameOverUI.SetActive(true);
+    }
+
+    public void DestroyHeart()
+    {
+        int lastChildIndex = hearts.transform.childCount - 1;
+        Debug.Log(lastChildIndex);
+        Destroy(hearts.transform.GetChild(lastChildIndex).gameObject);
     }
 }

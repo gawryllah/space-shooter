@@ -28,7 +28,7 @@ public class ObstacleScript : MonoBehaviour
         {
             
             Destroy(transform.gameObject);
-            PlayerController.health -= 1;
+            PlayerController.takeDmg();
             Debug.Log($"Zycia gracza: {PlayerController.health}");
         }
     }

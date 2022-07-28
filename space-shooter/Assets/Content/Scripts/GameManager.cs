@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -26,8 +24,9 @@ public class GameManager : MonoBehaviour
 
     public float bgScrollingSpeed;
 
-    public List<Image> images;
-
+    public List<Sprite> sprites;
+    public GameObject spritePlaceHolder;
+    public GameObject asteroid;
 
 
 
@@ -42,8 +41,6 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-
-
 
         setScore();
         StartCoroutine(spawner());
@@ -121,6 +118,20 @@ public class GameManager : MonoBehaviour
         StopCoroutine(spawner());
     }
 
+    private IEnumerator backgroundParticles()
+    {
+        while (isGameOn)
+        {
+            yield return new WaitForSecondsRealtime(Random.Range(6f, 20f));
+            if (Random.Range(0, 1) < 0.85f) {
+                Instantiate(sprites[0], new Vector3(12, randomHeight + 1), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(asteroid, new Vector3(12, randomHeight + 1), Quaternion.identity);
+            }
+        }
 
+    }
 
 }

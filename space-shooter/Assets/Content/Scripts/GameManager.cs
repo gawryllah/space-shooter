@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public float bgScrollingSpeed;
 
+    public List<Image> images;
+
 
 
 

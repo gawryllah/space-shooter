@@ -451,6 +451,7 @@ MonoBehaviour:
   score: 0
   hiScore: 0
   bgScrollingSpeed: 1.5
+  images: []
 --- !u!4 &305235429
 Transform:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotationScript : MonoBehaviour
+public class AsteroidScript : MonoBehaviour
 {
     public float rotationSpeed = 1f;
 

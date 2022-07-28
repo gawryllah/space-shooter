@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public float bgScrollingSpeed;
 
     public List<Sprite> sprites;
-    public GameObject spritePlaceHolder;
+    public GameObject planetPlaceHolder;
     public GameObject asteroid;
 
 
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
         setScore();
         StartCoroutine(spawner());
+        StartCoroutine(backgroundParticles());
     }
 
     
@@ -116,6 +117,7 @@ public class GameManager : MonoBehaviour
 
         UIManager.instance.ShowGameOverUI();
         StopCoroutine(spawner());
+        StopCoroutine(backgroundParticles());
     }
 
     private IEnumerator backgroundParticles()
@@ -124,7 +126,9 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(Random.Range(6f, 20f));
             if (Random.Range(0, 1) < 0.85f) {
-                Instantiate(sprites[0], new Vector3(12, randomHeight + 1), Quaternion.identity);
+                GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, randomHeight + 1), Quaternion.identity);
+                float scale = Random.Range(0.6f, 1f);
+                go.transform.localScale = new Vector3(scale, score, score);
             }
             else
             {

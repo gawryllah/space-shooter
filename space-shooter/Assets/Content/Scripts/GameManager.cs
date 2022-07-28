@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     public GameObject planetPlaceHolder;
     public GameObject asteroid;
 
+    public GameObject obstaclePrefab;
+
 
 
     private void Awake()
@@ -124,16 +126,32 @@ public class GameManager : MonoBehaviour
     {
         while (isGameOn)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(6f, 20f));
-            if (Random.Range(0, 1) < 0.85f) {
+            yield return new WaitForSecondsRealtime(Random.Range(10f, 20f));
+            if (Random.Range(0f, 1f) < 0.68f) {
                 GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, randomHeight + 1), Quaternion.identity);
                 float scale = Random.Range(0.6f, 1f);
-                go.transform.localScale = new Vector3(scale, score, score);
+                go.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Count-1)];
+                go.transform.localScale = new Vector3(scale, scale, scale);
+
+                Debug.Log("Spawned planet");
             }
             else
             {
-                Instantiate(asteroid, new Vector3(12, randomHeight + 1), Quaternion.identity);
+                if(Random.Range(0f, 1f) > 0.55f)
+                {
+                    Instantiate(obstaclePrefab, new Vector3(12, randomHeight), Quaternion.identity);
+
+                    Debug.Log("Spawned obstacle");
+                }
+                else
+                {
+                    Instantiate(asteroid, new Vector3(12, randomHeight + 1), Quaternion.identity);
+                    Debug.Log("Spawned asteroid");
+
+                }
+
             }
+            
         }
 
     }

@@ -472,6 +472,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: da7a46adb1c88ea49855615b17d2504a, type: 3}
   planetPlaceHolder: {fileID: 3351045014945891145, guid: 1301ffca12bc4554898f7de9d7125eb6, type: 3}
   asteroid: {fileID: 8668544562659160696, guid: eafa2e0f4c45244419a5a874d2c19967, type: 3}
+  obstaclePrefab: {fileID: 8879292017451597420, guid: 1802265968c88434c864f3b1d29473df, type: 3}
 --- !u!4 &305235429
 Transform:
   m_ObjectHideFlags: 0

@@ -18,22 +18,22 @@ public class ObstacleScript : MonoBehaviour
         StartCoroutine(colorChanger());
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
         transform.position -= new Vector3((speed * Time.deltaTime), 0f);
 
 
         if (transform.position.x < -10f)
         {
-            
+
             Destroy(transform.gameObject);
-            PlayerController.takeDmg();
+            //PlayerController.takeDmg();
             Debug.Log($"Zycia gracza: {PlayerController.health}");
         }
     }
-    
-    
+
+
     private IEnumerator colorChanger()
     {
         while (true) { 

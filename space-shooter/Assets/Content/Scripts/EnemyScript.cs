@@ -36,9 +36,9 @@ public class EnemyScript : MonoBehaviour
         if (canMove)
             transform.position -= new Vector3((speed * Time.deltaTime) , 0f);
 
-        if(transform.position.x < -10f)
+        if(transform.position.x < -10.5f)
         {
-            Destroy(transform.gameObject, 1f);
+            Destroy(transform.gameObject);
             PlayerController.takeDmg();
         }
     }

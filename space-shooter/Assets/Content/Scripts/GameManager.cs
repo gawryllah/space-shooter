@@ -24,11 +24,6 @@ public class GameManager : MonoBehaviour
 
     public float bgScrollingSpeed;
 
-    public List<Sprite> sprites;
-    public GameObject planetPlaceHolder;
-    public GameObject asteroid;
-
-    public GameObject obstaclePrefab;
 
 
 
@@ -46,7 +41,6 @@ public class GameManager : MonoBehaviour
 
         setScore();
         StartCoroutine(spawner());
-        StartCoroutine(backgroundParticles());
     }
 
     
@@ -119,41 +113,12 @@ public class GameManager : MonoBehaviour
 
         UIManager.instance.ShowGameOverUI();
         StopCoroutine(spawner());
-        StopCoroutine(backgroundParticles());
     }
 
-    private IEnumerator backgroundParticles()
+
+    public float getRandomHeight()
     {
-        while (isGameOn)
-        {
-            yield return new WaitForSecondsRealtime(Random.Range(10f, 20f));
-            if (Random.Range(0f, 1f) < 0.68f) {
-                GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, randomHeight + 1), Quaternion.identity);
-                float scale = Random.Range(0.6f, 1f);
-                go.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Count-1)];
-                go.transform.localScale = new Vector3(scale, scale, scale);
-
-                Debug.Log("Spawned planet");
-            }
-            else
-            {
-                if(Random.Range(0f, 1f) > 0.55f)
-                {
-                    Instantiate(obstaclePrefab, new Vector3(12, randomHeight), Quaternion.identity);
-
-                    Debug.Log("Spawned obstacle");
-                }
-                else
-                {
-                    Instantiate(asteroid, new Vector3(12, randomHeight + 1), Quaternion.identity);
-                    Debug.Log("Spawned asteroid");
-
-                }
-
-            }
-            
-        }
-
+        return randomHeight;
     }
 
 }

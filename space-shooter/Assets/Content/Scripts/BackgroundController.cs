@@ -9,10 +9,16 @@ public class BackgroundController : MonoBehaviour
     public GameObject bg1, bg2, bg3;
     public List<GameObject> backgroundObj;
 
+    public List<Sprite> sprites;
+    public GameObject planetPlaceHolder;
+    public GameObject asteroid;
+
+    public GameObject obstaclePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(backgroundParticles());
     }
 
     private void FixedUpdate()
@@ -38,5 +44,40 @@ public class BackgroundController : MonoBehaviour
             bg2 = bg3;
             bg3 = bgObj;
         }
+    }
+
+    private IEnumerator backgroundParticles()
+    {
+        while (GameManager.instance.isGameOn)
+        {
+            yield return new WaitForSecondsRealtime(Random.Range(10f, 20f));
+            if (Random.Range(0f, 1f) < 0.68f)
+            {
+                GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, GameManager.instance.getRandomHeight() + 1), Quaternion.identity);
+                float scale = Random.Range(0.6f, 1f);
+                go.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Count - 1)];
+                go.transform.localScale = new Vector3(scale, scale, scale);
+
+                Debug.Log("Spawned planet");
+            }
+            else
+            {
+                if (Random.Range(0f, 1f) > 0.55f)
+                {
+                    Instantiate(obstaclePrefab, new Vector3(12, GameManager.instance.getRandomHeight()), Quaternion.identity);
+
+                    Debug.Log("Spawned obstacle");
+                }
+                else
+                {
+                    Instantiate(asteroid, new Vector3(12, GameManager.instance.getRandomHeight() + 1), Quaternion.identity);
+                    Debug.Log("Spawned asteroid");
+
+                }
+
+            }
+
+        }
+
     }
 }

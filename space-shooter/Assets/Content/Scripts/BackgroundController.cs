@@ -36,7 +36,7 @@ public class BackgroundController : MonoBehaviour
 
         if(bg1.transform.position.x < -14f)
         {
-            var bgObj = Instantiate(backgroundObj[(int)Random.Range(0, backgroundObj.Count)], new Vector3(14f, 0), Quaternion.identity);
+            var bgObj = Instantiate(backgroundObj[(int)Random.Range(0, backgroundObj.Count)], new Vector3(15f, 0), Quaternion.identity);
 
             Destroy(bg1);
 

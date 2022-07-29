@@ -27,6 +27,7 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        InvokeRepeating("speedUp", 0.05f, 20f);
 
     }
 
@@ -75,6 +76,12 @@ public class EnemyScript : MonoBehaviour
             sr.color = new Color(currColor.r, currColor.g, currColor.g, alpha);
             yield return new WaitForSecondsRealtime(0.015f);
         }
+    }
+
+    private void speedUp()
+    {
+        speed *= 1.05f;
+        Debug.Log($"Sped up: {speed}");
     }
 
 

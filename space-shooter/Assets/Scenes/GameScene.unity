@@ -2352,6 +2352,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7636362333351597979, guid: 76d48d28847b6d543ac67735d3f95e41, type: 3}
+      propertyPath: movmentSpeed
+      value: 6.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d48d28847b6d543ac67735d3f95e41, type: 3}
 --- !u!1001 &5435043273303726168

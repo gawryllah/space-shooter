@@ -4,7 +4,8 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-    public static float speed = 3;
+    public static float baseSpeed = 3;
+    public static float speed = baseSpeed;
     [SerializeField]
     bool canMove;
 

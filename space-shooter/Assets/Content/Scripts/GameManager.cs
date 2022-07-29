@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
 
+        EnemyScript.speed = EnemyScript.baseSpeed;
         setScore();
         StartCoroutine(spawner());
         InvokeRepeating("enemySpeedUp", 0.1f, 12.5f);
@@ -124,8 +125,14 @@ public class GameManager : MonoBehaviour
 
     private void enemySpeedUp()
     {
-        EnemyScript.speed *= 1.05f;
+        EnemyScript.speed *= 1.1f;
         Debug.Log($"Sped up: {EnemyScript.speed}");
+
+        if (EnemyScript.speed > 5f)
+        {
+            bgScrollingSpeed *= 1.05f;
+            Debug.Log($"bg speed: {bgScrollingSpeed}");
+        }
     }
 
 }

@@ -50,7 +50,7 @@ public class BackgroundController : MonoBehaviour
     {
         while (GameManager.instance.isGameOn)
         {
-            yield return new WaitForSecondsRealtime(Random.Range(10f, 20f));
+            yield return new WaitForSecondsRealtime(Random.Range(12f, 22f));
             if (Random.Range(0f, 1f) < 0.68f)
             {
                 GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, GameManager.instance.getRandomHeight() + 1), Quaternion.identity);
@@ -76,6 +76,7 @@ public class BackgroundController : MonoBehaviour
                 }
 
             }
+            
 
         }
 

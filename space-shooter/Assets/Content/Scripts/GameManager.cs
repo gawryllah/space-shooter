@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
         setScore();
         StartCoroutine(spawner());
+        InvokeRepeating("enemySpeedUp", 0.1f, 12.5f);
     }
 
     
@@ -119,6 +120,12 @@ public class GameManager : MonoBehaviour
     public float getRandomHeight()
     {
         return randomHeight;
+    }
+
+    private void enemySpeedUp()
+    {
+        EnemyScript.speed *= 1.05f;
+        Debug.Log($"Sped up: {EnemyScript.speed}");
     }
 
 }

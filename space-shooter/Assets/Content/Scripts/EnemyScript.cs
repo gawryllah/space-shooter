@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
 
-    float speed = 3;
+    public static float speed = 3;
     [SerializeField]
     bool canMove;
 
@@ -27,7 +27,7 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        InvokeRepeating("speedUp", 0.05f, 20f);
+      
 
     }
 

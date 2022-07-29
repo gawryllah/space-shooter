@@ -132,6 +132,11 @@ public class GameManager : MonoBehaviour
         {
             bgScrollingSpeed *= 1.05f;
             Debug.Log($"bg speed: {bgScrollingSpeed}");
+
+            if(maxRespDelay > 2f)
+            {
+                maxRespDelay -= 0.2f; 
+            }
         }
     }
 

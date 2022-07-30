@@ -58,7 +58,7 @@ public class BackgroundController : MonoBehaviour
                 go.GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Count - 1)];
                 go.transform.localScale = new Vector3(scale, scale, scale);
 
-                Debug.Log("Spawned planet");
+                //Debug.Log("Spawned planet");
             }
             else
             {
@@ -66,12 +66,12 @@ public class BackgroundController : MonoBehaviour
                 {
                     Instantiate(obstaclePrefab, new Vector3(12, GameManager.instance.getRandomHeight()), Quaternion.identity);
 
-                    Debug.Log("Spawned obstacle");
+                    //Debug.Log("Spawned obstacle");
                 }
                 else
                 {
                     Instantiate(asteroid, new Vector3(12, GameManager.instance.getRandomHeight() + 1), Quaternion.identity);
-                    Debug.Log("Spawned asteroid");
+                    //Debug.Log("Spawned asteroid");
 
                 }
 

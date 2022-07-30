@@ -129,12 +129,12 @@ public class GameManager : MonoBehaviour
     private void enemySpeedUp()
     {
         EnemyScript.speed *= 1.1f;
-        Debug.Log($"Sped up: {EnemyScript.speed}");
+        //Debug.Log($"Sped up: {EnemyScript.speed}");
 
         if (EnemyScript.speed > 5f)
         {
             bgScrollingSpeed *= 1.05f;
-            Debug.Log($"bg speed: {bgScrollingSpeed}");
+            //Debug.Log($"bg speed: {bgScrollingSpeed}");
 
             if(maxRespDelay > 2f)
             {
@@ -162,4 +162,6 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Spawned powerup");
         }
     }
+
+  
 }

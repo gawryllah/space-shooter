@@ -24,10 +24,13 @@ public class PlayerController : MonoBehaviour
     public GameObject immortalityPrefab;
     private bool immortal;
 
+    private bool autoShootingOn;
+
 
     // Start is called before the first frame update
     private void Awake()
     {
+        autoShootingOn = false;
         immortal = false;
         transform.position = new Vector3(-7.4f, 0f);
         health = 3;
@@ -38,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
         Move();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !autoShootingOn)
         {
             Invoke("shoot", 0.2f);
         }
@@ -80,7 +83,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             health++;
-            Debug.Log($"Health: {health}");
+            //Debug.Log($"Health: {health}");
             UIManager.instance.AddHeart();
 
         }else if (collision.gameObject.tag.Equals("Immortality"))
@@ -88,6 +91,10 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             StartCoroutine(immortalityHandler());
 
+        }else if(collision.gameObject.tag.Equals("Ammo"))
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(autoShooting(8f));
         }
 
         
@@ -135,5 +142,17 @@ public class PlayerController : MonoBehaviour
         //yield return new WaitForSecondsRealtime(2f);
         Destroy(go);
         immortal = false;
+    }
+
+    private IEnumerator autoShooting(float duration)
+    {
+        autoShootingOn = true;
+        var end = Time.time + duration;
+        while (Time.time < end)
+        { 
+            shoot();
+            yield return new WaitForSecondsRealtime(0.15f);
+        }
+        autoShootingOn = false;
     }
 }

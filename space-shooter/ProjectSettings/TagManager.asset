@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Heart
   - Immortality
+  - Ammo
   layers:
   - Default
   - TransparentFX

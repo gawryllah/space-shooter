@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(spawner());
         StartCoroutine(powerUpSpawner());
         InvokeRepeating("enemySpeedUp", 0.1f, 12.5f);
-
     }
 
     
@@ -148,15 +147,17 @@ public class GameManager : MonoBehaviour
     {
         while (isGameOn)
         {
+          
             yield return new WaitForSecondsRealtime(Random.Range(13 + PlayerController.health, 22 + PlayerController.health));
+
             if (PlayerController.health < PlayerController.maxHealth)
             {
-                Instantiate(powerUps[(int)Random.Range(0, powerUps.Length - 1)], new Vector3(13f, randomHeight), Quaternion.identity);
+                Instantiate(powerUps[Mathf.RoundToInt(Random.Range(0f, (float)powerUps.Length - 1))], new Vector3(13f, randomHeight), Quaternion.identity);
             }
             else
             {
                 if(powerUps.Length > 1)
-                    Instantiate(powerUps[(int)Random.Range(1, powerUps.Length - 1)], new Vector3(13f, randomHeight), Quaternion.identity);
+                    Instantiate(powerUps[Mathf.RoundToInt(Random.Range(1f, (float)powerUps.Length - 1))], new Vector3(13f, randomHeight), Quaternion.identity);
             }
             Debug.Log($"Spawned powerup");
         }

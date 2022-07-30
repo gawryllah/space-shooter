@@ -22,5 +22,10 @@ public class AsteroidScript : MonoBehaviour
         transform.position -= new Vector3((GameManager.instance.bgScrollingSpeed * Time.deltaTime) + 0.05f, 0f);
 
         transform.Rotate(new Vector3(0f, 0f, rotationSpeed));
+
+        if (transform.position.x < -13f)
+        {
+            Destroy(transform.gameObject);
+        }
     }
 }

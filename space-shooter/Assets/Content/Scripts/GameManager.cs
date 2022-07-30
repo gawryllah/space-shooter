@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public float bgScrollingSpeed;
 
+    public GameObject[] powerUps;
+
 
 
 
@@ -42,7 +44,9 @@ public class GameManager : MonoBehaviour
         EnemyScript.speed = EnemyScript.baseSpeed;
         setScore();
         StartCoroutine(spawner());
+        StartCoroutine(powerUpSpawner());
         InvokeRepeating("enemySpeedUp", 0.1f, 12.5f);
+
     }
 
     
@@ -140,4 +144,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private IEnumerator powerUpSpawner()
+    {
+        while (isGameOn)
+        {
+            yield return new WaitForSecondsRealtime(Random.Range(13 + PlayerController.health, 22 + PlayerController.health));
+            if (PlayerController.health < PlayerController.maxHealth)
+            {
+                Instantiate(powerUps[(int)Random.Range(0, powerUps.Length - 1)], new Vector3(13f, randomHeight), Quaternion.identity);
+            }
+            else
+            {
+                if(powerUps.Length > 1)
+                    Instantiate(powerUps[(int)Random.Range(1, powerUps.Length - 1)], new Vector3(13f, randomHeight), Quaternion.identity);
+            }
+            Debug.Log($"Spawned powerup");
+        }
+    }
 }

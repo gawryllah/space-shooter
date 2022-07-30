@@ -72,4 +72,15 @@ public class UIManager : MonoBehaviour
         //Debug.Log(lastChildIndex);
         Destroy(hearts.transform.GetChild(lastChildIndex).gameObject);
     }
+
+    public void AddHeart()
+    {
+        var obj = Instantiate(hearts.transform.GetChild(0));
+        obj.SetParent(hearts.gameObject.transform);
+
+        for(int i = 0; i < hearts.transform.childCount; i++)
+        {
+            hearts.transform.GetChild(i).localScale = new Vector3(1f, 1f, 1f);
+        }
+    }
 }

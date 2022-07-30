@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     GameObject bullet;
 
     public static int health;
+    public static int maxHealth = 6;
 
     public GameObject engine1;
     public GameObject engine2;
@@ -69,6 +70,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Enemy") || collision.gameObject.tag.Equals("Obstacle"))
         {
             GameManager.instance.GameOver();
+        }
+        else if (collision.gameObject.tag.Equals("Heart") && health < maxHealth) 
+        {
+            Destroy(collision.gameObject);
+            health++;
+            Debug.Log($"Health: {health}");
+            UIManager.instance.AddHeart();
         }
 
         

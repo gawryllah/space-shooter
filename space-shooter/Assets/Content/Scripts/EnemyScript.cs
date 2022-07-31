@@ -79,13 +79,4 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    private void speedUp()
-    {
-        speed *= 1.05f;
-        Debug.Log($"Sped up: {speed}");
-    }
-
-
-
-
 }

@@ -5,12 +5,8 @@ public class BulletScript : MonoBehaviour
     [SerializeField]
     float speed;
 
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         transform.position += new Vector3(speed * Time.deltaTime, 0);
     }
-
-
 }

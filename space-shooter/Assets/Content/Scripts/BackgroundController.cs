@@ -23,8 +23,14 @@ public class BackgroundController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(GameManager.instance.isGameOn)
+        if (GameManager.instance.isGameOn)
+        {
             backgroundMovment();
+        }
+        else
+        {
+            StopAllCoroutines();
+        }
     }
 
 

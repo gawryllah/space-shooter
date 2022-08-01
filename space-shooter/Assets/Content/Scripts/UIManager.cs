@@ -11,7 +11,10 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text scoreText;
     public TMP_Text hiScoreText;
+
     public GameObject gameOverUI;
+    public GameObject winUI;
+
     public Button restartBtn;
     public Button exitBtn;
 
@@ -31,13 +34,9 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         gameOverUI.SetActive(false);
+        winUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void UpdateUI()
     {
@@ -64,6 +63,11 @@ public class UIManager : MonoBehaviour
     public void ShowGameOverUI()
     {
         gameOverUI.SetActive(true);
+    }
+
+    public void ShowWinUI()
+    {
+        winUI.SetActive(true);
     }
 
     public void DestroyHeart()

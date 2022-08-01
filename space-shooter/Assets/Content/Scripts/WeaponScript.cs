@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    static int id = 0;
 
     static float speed = 8f;
 
@@ -28,8 +27,6 @@ public class WeaponScript : MonoBehaviour
             Destroy(transform.gameObject);
             alreadyHit = true;
             PlayerController.takeDmg();
-            Debug.Log($"id: {id}, bool: {alreadyHit}, hp: {PlayerController.health}");
-            id++;
         }
     }
 }

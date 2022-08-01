@@ -12,6 +12,9 @@ public class PowerUpScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isGameOn)
+            StopAllCoroutines();
+
         transform.position -= new Vector3((GameManager.instance.bgScrollingSpeed * Time.deltaTime) + 0.01f, 0f);
 
         if (transform.position.x < -12f)

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private bool autoShootingOn;
 
+    public static bool canShoot;
 
     // Start is called before the first frame update
     private void Awake()
@@ -34,19 +35,19 @@ public class PlayerController : MonoBehaviour
         immortal = false;
         transform.position = new Vector3(-7.4f, 0f);
         health = 3;
+        canShoot = true;
     }
 
-    private void Start()
-    {
-        Debug.Log($"RZYTKO START: {health}");
-    }
+
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance.isGameOn)
+            StopAllCoroutines();
 
         Move();
 
-        if (Input.GetKeyDown(KeyCode.Space) && !autoShootingOn)
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot && !autoShootingOn)
         {
             Invoke("shoot", 0.2f);
         }
@@ -111,7 +112,11 @@ public class PlayerController : MonoBehaviour
         health -= 1;
         UIManager.instance.DestroyHeart();
         if (health <= 0)
+        {
             GameManager.instance.GameOver();
+            
+        }
+            
     }
 
     private void turnOnEngine()
@@ -154,7 +159,7 @@ public class PlayerController : MonoBehaviour
     {
         autoShootingOn = true;
         var end = Time.time + duration;
-        while (Time.time < end)
+        while (Time.time < end && GameManager.instance.isGameOn)
         { 
             shoot();
             yield return new WaitForSecondsRealtime(0.15f);

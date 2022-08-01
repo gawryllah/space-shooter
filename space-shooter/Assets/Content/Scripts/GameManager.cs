@@ -28,18 +28,21 @@ public class GameManager : MonoBehaviour
 
     public GameObject bossPrefab;
 
-
-
-
-
+    private bool chapter2;
+    public static bool boss;
+    private bool isBossSpawned;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            isGameOn = true;
         }
+
+        isGameOn = true;
+        chapter2 = false;
+        boss = false;
+        isBossSpawned = false;
     }
 
     // Start is called before the first frame update
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator spawner()
     {
-        while (true)
+        while (isGameOn)
         {
             yield return new WaitForSecondsRealtime(randomDel);
             if(isGameOn && canSpawn)
@@ -89,6 +92,14 @@ public class GameManager : MonoBehaviour
     {
         score += 1;
         UIManager.instance.UpdateUI();
+
+        if( score >= 50 && !isBossSpawned)
+        {
+            isBossSpawned = true;
+            canSpawn = false;
+            boss = true;
+            spawnBoss();
+        }
     }
 
     private void setScore()
@@ -121,9 +132,24 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
 
         UIManager.instance.ShowGameOverUI();
-        StopCoroutine(spawner());
+        StopAllCoroutines();
     }
 
+    public void playerWon()
+    {
+        isGameOn = false;
+        if (score > hiScore)
+            saveScore();
+        Time.timeScale = 0f;
+
+        UIManager.instance.ShowWinUI();
+        StopAllCoroutines();
+    }
+
+    void spawnBoss()
+    {
+        Instantiate(bossPrefab);
+    }
 
     public float getRandomHeight()
     {

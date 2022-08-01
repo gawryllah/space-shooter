@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    static float speed = 4.5f;
-
-    private void Start()
-    {
-        speed *= 1.08f;
-        Debug.Log($"Aktualna predkosc {this}: {speed}");
-    }
+    static float speed = 8f;
 
     private void FixedUpdate()
     {
+        
         transform.position -= new Vector3(speed * Time.deltaTime, 0);
+
+        if(transform.position.x < -12f)
+        {
+            Destroy(transform.gameObject);
+        }
     }
 }

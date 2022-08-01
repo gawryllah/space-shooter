@@ -95,6 +95,11 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             StartCoroutine(autoShooting(8f));
+
+        }else if (collision.gameObject.tag.Equals("Weapon") && !immortal)
+        {
+            Destroy(collision.gameObject);
+            takeDmg();
         }
 
         

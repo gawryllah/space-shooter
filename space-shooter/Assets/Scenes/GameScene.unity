@@ -455,6 +455,8 @@ MonoBehaviour:
   - {fileID: 3463915774234510374, guid: f097a28a7dec08d4183db26f8bd46121, type: 3}
   - {fileID: 8038721173193528919, guid: 6a036358dd2edd0409399cfe255e1d5b, type: 3}
   - {fileID: 9170263614253510493, guid: 44b59940fcb1d6b4d8717e35f830703d, type: 3}
+  canSpawn: 0
+  bossPrefab: {fileID: 7994637056778095549, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
 --- !u!4 &305235429
 Transform:
   m_ObjectHideFlags: 0
@@ -2443,17 +2445,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5564571071218680340, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5564571071218680340, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7994637056778095544, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7994637056778095544, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2237797
+      value: 7.06
       objectReference: {fileID: 0}
     - target: {fileID: 7994637056778095544, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6798141
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7994637056778095544, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
       propertyPath: m_LocalPosition.z

@@ -35,6 +35,11 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(-7.4f, 0f);
         health = 3;
     }
+
+    private void Start()
+    {
+        Debug.Log($"RZYTKO START: {health}");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -96,10 +101,6 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             StartCoroutine(autoShooting(8f));
 
-        }else if (collision.gameObject.tag.Equals("Weapon") && !immortal)
-        {
-            Destroy(collision.gameObject);
-            takeDmg();
         }
 
         

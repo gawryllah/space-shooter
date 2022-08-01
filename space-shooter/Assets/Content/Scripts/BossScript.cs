@@ -46,7 +46,7 @@ public class BossScript : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(Instantiate(weapon, transform.position, Quaternion.identity));
+        Instantiate(weapon, transform.position, Quaternion.identity);
     }
 
     private void playShootingAnim()

@@ -23,7 +23,7 @@ public class BackgroundController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.instance.isGameOn)
+        if (GameManager.instance.isGameOn && !GameManager.instance.boss)
         {
             backgroundMovment();
         }
@@ -50,11 +50,12 @@ public class BackgroundController : MonoBehaviour
             bg2 = bg3;
             bg3 = bgObj;
         }
+
     }
 
     private IEnumerator backgroundParticles()
     {
-        while (GameManager.instance.isGameOn)
+        while (GameManager.instance.isGameOn && !GameManager.instance.boss)
         {
             yield return new WaitForSecondsRealtime(Random.Range(12f, 22f));
             if (Random.Range(0f, 1f) < 0.68f)

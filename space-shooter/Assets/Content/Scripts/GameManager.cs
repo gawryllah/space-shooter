@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject bossPrefab;
 
     private bool chapter2;
-    public static bool boss;
+    public bool boss;
     private bool isBossSpawned;
 
     private void Awake()
@@ -95,9 +95,9 @@ public class GameManager : MonoBehaviour
 
         if( score >= 50 && !isBossSpawned)
         {
+            StartCoroutine(bossFlagSwitch());
             isBossSpawned = true;
             canSpawn = false;
-            boss = true;
             spawnBoss();
         }
     }
@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator powerUpSpawner()
     {
-        while (isGameOn)
+        while (isGameOn && !isBossSpawned)
         {
           
             yield return new WaitForSecondsRealtime(Random.Range(13 + PlayerController.health, 22 + PlayerController.health));
@@ -191,6 +191,12 @@ public class GameManager : MonoBehaviour
             }
             Debug.Log($"Spawned powerup");
         }
+    }
+
+    private IEnumerator bossFlagSwitch()
+    {
+        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 && FindObjectsOfType<BGParticleScript>().Length == 0 && FindObjectsOfType<PowerUpScript>().Length == 0);
+        boss = true;
     }
 
   

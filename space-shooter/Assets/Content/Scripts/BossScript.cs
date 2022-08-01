@@ -41,6 +41,8 @@ public class BossScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             takeDmg();
+            GameManager.instance.addPoint();
+            GameManager.instance.addPoint();
         }
     }
 
@@ -120,7 +122,7 @@ public class BossScript : MonoBehaviour
 
     IEnumerator showOnScene(float duration)
     {
-        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0);
+        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0);
 
         PlayerController.canShoot = false;
         float time = 0;

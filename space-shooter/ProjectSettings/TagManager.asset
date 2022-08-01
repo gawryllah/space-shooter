@@ -10,6 +10,8 @@ TagManager:
   - Heart
   - Immortality
   - Ammo
+  - Weapon
+  - Boss
   layers:
   - Default
   - TransparentFX

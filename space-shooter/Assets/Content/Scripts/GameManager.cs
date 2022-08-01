@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] powerUps;
 
+    public bool canSpawn;
+
 
 
 
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSecondsRealtime(randomDel);
-            if(isGameOn)
+            if(isGameOn && canSpawn)
                 spawnEnemy();
         }
     }

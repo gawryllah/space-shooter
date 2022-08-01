@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,771 +116,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: reaperbot-sheet-alpha_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4daa303abbbc2b44cac49d0204ac7226
-      internalID: -869177837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d7865853a26bd54b9e42fe2c4315a12
-      internalID: -959004453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9df0671b1a8a6040a2d027e068391b8
-      internalID: 2121412338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_3
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 005525dad64b37941b9deb7719261761
-      internalID: 1836021449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_4
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87ad1df8afc92124e907465909ea6bfb
-      internalID: 353323268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_5
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: affcd3667f4cec74c8fc2153d16280e6
-      internalID: 540637876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_6
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87a5f97e30ffced438786b2803814b0f
-      internalID: 1387573660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_7
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e20377100e8d0c9478573823417951a0
-      internalID: -493071887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_8
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c562e05b6b0fbb64b8d6ad8ad3843051
-      internalID: -1861309000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ae60cc9e4817f9469041488fdcd1aaa
-      internalID: 444605461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_10
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd8524537db373548be4d6b4e47b8ad6
-      internalID: -163450798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_11
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46d0ce242f2b087468b90ed820a2413c
-      internalID: 2086553866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_12
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 116
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb6b40fceb6a5a04b86846ac9e36127e
-      internalID: -766327981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_13
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbfba6fcfd59e674aaf052b64c7767c1
-      internalID: 66206534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_14
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bb9abe116eefed4388d34152bf0d056
-      internalID: 1877457614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_15
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b1a0166de42a08488660d2000fa2809
-      internalID: 1248374629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_16
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 457d165b8fbbca84ea0ab41872b69088
-      internalID: -1310782819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_17
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f5165830f3512d4ca871a438c547423
-      internalID: -72261708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ba3a5de6403afd4a917105606c2e203
-      internalID: -307979461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_19
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0ee2972455f1084b9d00a26b96c5978
-      internalID: 893630326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_20
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33e798c6530ddd246adbad18ed1707f9
-      internalID: 539755186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_21
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83e93190187d9d54a973fd8eb7b70d2c
-      internalID: -629786648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_22
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 80
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b172568634c54ec439919ee16185827b
-      internalID: 1007373541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_23
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51e3f29dafdc0f74197dedf03d1f65c3
-      internalID: -74761291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_24
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2b4ab741c94e114aaf07c6485eb234b
-      internalID: -214812792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_25
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2461af621e76c1a4baf5e375cc734cb3
-      internalID: 843070088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_26
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 44
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 679215b62acde044e8d5fe761f8f5451
-      internalID: -1634586549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_27
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6dae0df2bd3158409cc7432cd6a9750
-      internalID: -1479625783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_28
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 391ba22ff7fc3ae46ba32c2b62ee1a9f
-      internalID: 489831136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_29
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 946ced0d538785a4aa1cd385d1c73363
-      internalID: 2140677567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_30
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7117f3046cabdd448fbd066f4b5e8f1
-      internalID: 1513524624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_31
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 277c47532203b1a45995392f7f66d96d
-      internalID: 208135630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_32
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bff7a844b9a0b842b3d0c62378c48f1
-      internalID: 893166466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_33
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d759030b85747d544905a1469c96fea5
-      internalID: -1388246132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_34
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fc35a48c3a31c84490b9670b43d1fa8
-      internalID: 914514723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: reaperbot-sheet-alpha_35
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 8
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39309a48eeaf0704da84fa2eb6531a4a
-      internalID: 246714915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: bossWeapon_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 44
+        x: 0
+        y: 117
         width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -896,19 +140,19 @@ TextureImporter:
       name: bossWeapon_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 44
+        x: 36
+        y: 117
         width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6274f04e590b150469474fb19150f7a2
-      internalID: -869569652
+      spriteID: ee7e95f1caadb584f9a9bd5775216c9d
+      internalID: -989842978
       vertices: []
       indices: 
       edges: []
@@ -917,19 +161,19 @@ TextureImporter:
       name: bossWeapon_2
       rect:
         serializedVersion: 2
-        x: 216
-        y: 44
+        x: 72
+        y: 117
         width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9dc70d6b243ec49a544ca78a841792
-      internalID: 900467304
+      spriteID: c74c9a447ae813143867c6f1863faec7
+      internalID: 421299860
       vertices: []
       indices: 
       edges: []
@@ -938,19 +182,775 @@ TextureImporter:
       name: bossWeapon_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 8
+        x: 108
+        y: 117
         width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08ffc7d09193f714e86932a9a16ac6cc
-      internalID: -1294245931
+      spriteID: 966ad42ebe66c5449ad666dd7e225bff
+      internalID: 802608676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf64d9d63b65c544b959f24228cd7e4
+      internalID: 798431924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc11edbdd1f8f604caf79ac1836e6130
+      internalID: -2107456138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cc3f75ee3d4c846b421c6990ad4177
+      internalID: -212646383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184c548954a04274885a5d6f4fb42ede
+      internalID: 1687212628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2a8214fdaf77e48a917a9e8da16e0a
+      internalID: 237054547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 117
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127075770c19d9c43b013120aa5e84f6
+      internalID: 1556653656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c03e4d16546dcc469e618fbf4e8acb4
+      internalID: 698356384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05ec21f35d60354fb306b35bb3ad85f
+      internalID: -982828270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2240cd32c31dc5346b4ee9dbccc60f34
+      internalID: -371480876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_13
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d0e0a18778d134ca24151b5aa20d2f
+      internalID: -740366986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c40b9637555754686aba6f1ade12e8
+      internalID: 60834521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfb3593177ce954c9abdb150927d005
+      internalID: -873958596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_16
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196923fea20657f48bed3406d1969fda
+      internalID: -820716150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960e5ad36771f614b8bb61185ca54ce4
+      internalID: 1833527577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946658a883580e34cb3c1fff48719bb2
+      internalID: 379314069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_19
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac579ea2bb166f449467ff0bfefb1a5
+      internalID: 1001962875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277423e9231bf7d4488182475d684af8
+      internalID: 111168441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720d3af68a1c0114b944c6dfb3b78804
+      internalID: 419943815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc19ef27a40ef543bda38c6c27914da
+      internalID: 2060390653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb85b2dbabaae541bffb52e623d0f03
+      internalID: 1289158717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_24
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a55e28380e0e104fb0e59932063fe7e
+      internalID: -1754753871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_25
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff49fe55a4c8074bb687427c33f9eec
+      internalID: 972103850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_26
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa91342b510134c966798fe581793a
+      internalID: 168000460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_27
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf91fef953d3344449310a7236f43973
+      internalID: 1819690526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20d6f616e6b6564a91357b8538256b9
+      internalID: -1937667696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_29
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 45
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383b5566f2fbb204aaaace6d7d0aa78d
+      internalID: -150343923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208780636631cc24bad071c890d7ab1d
+      internalID: 1667545650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_31
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d417c58350113740abc78f344fc9c29
+      internalID: 1023495516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4a56dca2774d741b80aa69660cf596
+      internalID: -789129274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_33
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da938ae8fc11c04b9681b3fe6b4439a
+      internalID: 1495258326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5bf54369b66774c8cc4fa235c64991
+      internalID: -81094075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_35
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d154f420414f1c54dbb111a8b0c08f98
+      internalID: 1244397487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_36
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d6dedb05e6df040a339b1b58cf49ce
+      internalID: 2081540555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_37
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d442b0879c51e8418e86a93229592e5
+      internalID: 1262255585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85b07b73ac98384bbbf17063b467f76
+      internalID: 1092816301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossWeapon_39
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 9
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c4e9e3575c1fe498e8624d30274313
+      internalID: 1565561180
       vertices: []
       indices: 
       edges: []
@@ -966,46 +966,46 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      reaperbot-sheet-alpha_25: 843070088
-      reaperbot-sheet-alpha_0: -869177837
-      reaperbot-sheet-alpha_24: -214812792
-      reaperbot-sheet-alpha_7: -493071887
-      bossWeapon_2: 900467304
-      reaperbot-sheet-alpha_15: 1248374629
-      reaperbot-sheet-alpha_33: -1388246132
-      reaperbot-sheet-alpha_27: -1479625783
-      reaperbot-sheet-alpha_9: 444605461
-      reaperbot-sheet-alpha_2: 2121412338
-      reaperbot-sheet-alpha_30: 1513524624
-      reaperbot-sheet-alpha_18: -307979461
-      reaperbot-sheet-alpha_8: -1861309000
-      reaperbot-sheet-alpha_23: -74761291
-      reaperbot-sheet-alpha_11: 2086553866
-      reaperbot-sheet-alpha_14: 1877457614
-      reaperbot-sheet-alpha_31: 208135630
-      reaperbot-sheet-alpha_16: -1310782819
-      reaperbot-sheet-alpha_34: 914514723
-      reaperbot-sheet-alpha_28: 489831136
-      bossWeapon_1: -869569652
-      reaperbot-sheet-alpha_29: 2140677567
-      reaperbot-sheet-alpha_1: -959004453
-      reaperbot-sheet-alpha_22: 1007373541
-      reaperbot-sheet-alpha_21: -629786648
-      reaperbot-sheet-alpha_20: 539755186
-      reaperbot-sheet-alpha_32: 893166466
-      reaperbot-sheet-alpha_19: 893630326
-      reaperbot-sheet-alpha_10: -163450798
-      reaperbot-sheet-alpha_6: 1387573660
-      reaperbot-sheet-alpha_26: -1634586549
-      reaperbot-sheet-alpha_13: 66206534
-      reaperbot-sheet-alpha_35: 246714915
-      reaperbot-sheet-alpha_5: 540637876
-      reaperbot-sheet-alpha_4: 353323268
+      bossWeapon_24: -1754753871
+      bossWeapon_20: 111168441
+      bossWeapon_6: -212646383
+      bossWeapon_39: 1565561180
+      bossWeapon_29: -150343923
+      bossWeapon_16: -820716150
+      bossWeapon_14: 60834521
+      bossWeapon_2: 421299860
+      bossWeapon_19: 1001962875
+      bossWeapon_30: 1667545650
+      bossWeapon_33: 1495258326
+      bossWeapon_35: 1244397487
+      bossWeapon_9: 1556653656
+      bossWeapon_38: 1092816301
+      bossWeapon_31: 1023495516
+      bossWeapon_22: 2060390653
+      bossWeapon_11: -982828270
       bossWeapon_0: 295480162
-      bossWeapon_3: -1294245931
-      reaperbot-sheet-alpha_12: -766327981
-      reaperbot-sheet-alpha_3: 1836021449
-      reaperbot-sheet-alpha_17: -72261708
+      bossWeapon_18: 379314069
+      bossWeapon_1: -989842978
+      bossWeapon_15: -873958596
+      bossWeapon_26: 168000460
+      bossWeapon_28: -1937667696
+      bossWeapon_17: 1833527577
+      bossWeapon_3: 802608676
+      bossWeapon_8: 237054547
+      bossWeapon_13: -740366986
+      bossWeapon_12: -371480876
+      bossWeapon_23: 1289158717
+      bossWeapon_7: 1687212628
+      bossWeapon_32: -789129274
+      bossWeapon_5: -2107456138
+      bossWeapon_36: 2081540555
+      bossWeapon_25: 972103850
+      bossWeapon_27: 1819690526
+      bossWeapon_34: -81094075
+      bossWeapon_21: 419943815
+      bossWeapon_4: 798431924
+      bossWeapon_37: 1262255585
+      bossWeapon_10: 698356384
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

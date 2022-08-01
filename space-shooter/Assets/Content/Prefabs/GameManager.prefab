@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3793905929406598985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3793905929406598991}
+  - component: {fileID: 3793905929406598990}
+  - component: {fileID: 3793905929406598988}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3793905929406598991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793905929406598985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3793905929406598990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793905929406598985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8d2c06f54bced4b85c056656d2dff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameOn: 0
+  enemyPrefab: {fileID: 3060903516273970400, guid: 0cc4f67668cff864db09d8664f3439e5, type: 3}
+  maxRespHeight: 4.65
+  minRespDelay: 0.54
+  maxRespDelay: 3.92
+  score: 0
+  hiScore: 0
+  bgScrollingSpeed: 1.5
+  powerUps:
+  - {fileID: 3463915774234510374, guid: f097a28a7dec08d4183db26f8bd46121, type: 3}
+  - {fileID: 8038721173193528919, guid: 6a036358dd2edd0409399cfe255e1d5b, type: 3}
+  - {fileID: 9170263614253510493, guid: 44b59940fcb1d6b4d8717e35f830703d, type: 3}
+--- !u!114 &3793905929406598988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793905929406598985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9842e08b4191ae4fb1b41a8d8a1c326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bg1: {fileID: 0}
+  bg2: {fileID: 0}
+  bg3: {fileID: 0}
+  backgroundObj:
+  - {fileID: 5435043274044170174, guid: 6511166457fc7e449a76e68e8ccd35bb, type: 3}
+  - {fileID: 9188697876512129896, guid: 2fa3880b8b2ae6a438156b115a6401b8, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 749943bd27b60be41a22880da50086bf, type: 3}
+  - {fileID: 21300000, guid: 3eca97598bbab914e94cfe58035f6dd8, type: 3}
+  - {fileID: 21300000, guid: 42fa57b23f3ac914fbf5e4bbac9777b6, type: 3}
+  - {fileID: 21300000, guid: 2282b142c0ed7ec4a9e574d41d4e16fd, type: 3}
+  - {fileID: 21300000, guid: 3db7266e72e8f604586958253b122a84, type: 3}
+  - {fileID: 21300000, guid: 1031dfbfe464b0743a5029189bede4bb, type: 3}
+  - {fileID: 21300000, guid: d6c9fb368bb2ee34e9b2155ead33c0c6, type: 3}
+  - {fileID: 21300000, guid: 91789f11a11c81845b6a9869b9998b43, type: 3}
+  - {fileID: 21300000, guid: e7677721f7f0b104394ac756aed40f9c, type: 3}
+  - {fileID: 21300000, guid: 9e552bf5344670e41a0c95a088457edf, type: 3}
+  - {fileID: 21300000, guid: c4cae2894052b3c4cafe1f6466b5b5b8, type: 3}
+  - {fileID: 21300000, guid: 379bc898f6c8ff547a3ced8f92c7aff5, type: 3}
+  - {fileID: 21300000, guid: cec554bee5fdf0f41b87fb10ef69cdac, type: 3}
+  - {fileID: 21300000, guid: 95d2bb753edeeb146a9fc1d1bb5dabc2, type: 3}
+  - {fileID: 21300000, guid: 22941553db48ef94db411c80f1d6971d, type: 3}
+  - {fileID: 21300000, guid: 61ae396d519aaa74fbc8799d7b6f59ab, type: 3}
+  - {fileID: 21300000, guid: 6c0177cffc530de4ea9630012ba9e48f, type: 3}
+  - {fileID: 21300000, guid: da7a46adb1c88ea49855615b17d2504a, type: 3}
+  planetPlaceHolder: {fileID: 3351045014945891145, guid: 1301ffca12bc4554898f7de9d7125eb6, type: 3}
+  asteroid: {fileID: 8668544562659160696, guid: eafa2e0f4c45244419a5a874d2c19967, type: 3}
+  obstaclePrefab: {fileID: 8879292017451597420, guid: 1802265968c88434c864f3b1d29473df, type: 3}

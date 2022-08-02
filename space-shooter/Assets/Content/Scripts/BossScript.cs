@@ -113,10 +113,10 @@ public class BossScript : MonoBehaviour
             }
             transform.position = targetPosition;
             yield return new WaitForSecondsRealtime(Random.Range(1f, 2f));
-            targetPosition = new Vector2(transform.position.x, Random.Range(-4f, 3.65f));
+            targetPosition = new Vector2(transform.position.x, Random.Range(-3.5f, 3.5f));
 
             if (Vector2.Distance(transform.position, targetPosition) < 2f)
-                targetPosition = new Vector2(transform.position.x, Random.Range(-4f, 3.65f));
+                targetPosition = new Vector2(transform.position.x, Random.Range(-3.5f, 3.5f));
         }
     }
 

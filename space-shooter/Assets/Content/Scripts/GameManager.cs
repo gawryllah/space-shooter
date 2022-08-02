@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public int score;
     public int hiScore;
+    public int bossScore;
 
     public float bgScrollingSpeed;
 
@@ -28,9 +29,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject bossPrefab;
 
-    private bool chapter2;
     public bool boss;
-    private bool isBossSpawned;
+    public bool isBossSpawned;
 
     private void Awake()
     {
@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
         }
 
         isGameOn = true;
-        chapter2 = false;
         boss = false;
         isBossSpawned = false;
     }
@@ -93,12 +92,11 @@ public class GameManager : MonoBehaviour
         score += 1;
         UIManager.instance.UpdateUI();
 
-        if( score >= 50 && !isBossSpawned)
+        if( score >= bossScore && !isBossSpawned)
         {
             StartCoroutine(bossFlagSwitch());
             isBossSpawned = true;
             canSpawn = false;
-            spawnBoss();
         }
     }
 
@@ -115,6 +113,7 @@ public class GameManager : MonoBehaviour
 
         UIManager.instance.SetHiScore();
         score = 0;
+        bossScore = 60;
     }
 
     private void saveScore()
@@ -195,8 +194,12 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator bossFlagSwitch()
     {
-        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 && FindObjectsOfType<BGParticleScript>().Length == 0 && FindObjectsOfType<PowerUpScript>().Length == 0);
+        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 && 
+                                            FindObjectsOfType<BGParticleScript>().Length == 0 && FindObjectsOfType<PowerUpScript>().Length == 0 && FindObjectsOfType<AsteroidScript>().Length == 0);
         boss = true;
+        spawnBoss();
+        UIManager.instance.tillBossText.enabled = false;
+        StopAllCoroutines();
     }
 
   

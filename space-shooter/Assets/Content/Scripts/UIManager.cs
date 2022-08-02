@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public TMP_Text scoreText;
+    public TMP_Text tillBossText;
     public TMP_Text hiScoreText;
 
     public GameObject gameOverUI;
@@ -41,6 +42,8 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
         scoreText.text = $"Score: {GameManager.instance.score}";
+        tillBossText.text = $"Till Boss: {(GameManager.instance.bossScore - GameManager.instance.score < 0 ? "0" : GameManager.instance.bossScore - GameManager.instance.score)}";
+        
     }
 
     public void SetHiScore()

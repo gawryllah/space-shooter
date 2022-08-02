@@ -28,8 +28,6 @@ public class ObstacleScript : MonoBehaviour
         {
 
             Destroy(transform.gameObject);
-            //PlayerController.takeDmg();
-            Debug.Log($"Zycia gracza: {PlayerController.health}");
         }
     }
 

@@ -55,7 +55,7 @@ public class BackgroundController : MonoBehaviour
 
     private IEnumerator backgroundParticles()
     {
-        while (GameManager.instance.isGameOn && !GameManager.instance.boss)
+        while (GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
         {
             yield return new WaitForSecondsRealtime(Random.Range(12f, 22f));
             if (Random.Range(0f, 1f) < 0.68f)

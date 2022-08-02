@@ -9,9 +9,20 @@ public class MainMenuManager : MonoBehaviour
 
     public Image logo;
     Color logoColor;
+
+    public GameObject menu;
+    public GameObject newGameView;
+
+    public GameObject newGameViewButtons;
+    public GameObject bossModeSpec;
     // Start is called before the first frame update
     void Start()
     {
+        menu.SetActive(true);
+        newGameView.SetActive(false);
+        //newGameViewButtons.SetActive(false);
+        bossModeSpec.SetActive(false);
+
         logoColor = logo.color;
         StartCoroutine(logoAnim());
     }
@@ -36,6 +47,51 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ShowNewGameView()
+    {
+        menu.SetActive(false);
+        newGameView.SetActive(true);
+    }
+    public void GoBackNewGameToMenu()
+    {
+        menu.SetActive(true);
+        newGameView.SetActive(false);
+    }
+
+    public void GoBackBossSpecToNewGame()
+    {
+        bossModeSpec.SetActive(false);
+        newGameViewButtons.SetActive(true);
+    }
+
+
+
+    public void BossMode()
+    {
+
+        PlayerPrefs.SetString("SS-Boss", "true");
+        PlayerPrefs.SetString("SS-Arcade", "false");
+
+        bossModeSpec.SetActive(true);
+        newGameViewButtons.SetActive(false);
+
+        //StartGame();
+    }
+
+    public void ArcadeMode()
+    {
+        PlayerPrefs.SetString("SS-Boss", "false");
+        PlayerPrefs.SetString("SS-Arcade", "true");
+        StartGame();
+    }
+
+    public void SetTillBossPoints(string points)
+    {
+        Debug.Log(points.ToString());
+        PlayerPrefs.SetInt("SS-TBP", int.Parse(points.ToString()));
+    }
+
 
     private IEnumerator logoAnim()
     {

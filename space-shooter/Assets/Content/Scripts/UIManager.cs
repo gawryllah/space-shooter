@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
     {
         gameOverUI.SetActive(false);
         winUI.SetActive(false);
+        UpdateUI();
     }
 
 

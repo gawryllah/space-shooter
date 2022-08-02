@@ -29,11 +29,14 @@ public class GameManager : MonoBehaviour
 
     public GameObject bossPrefab;
 
+
     public bool boss;
     public bool isBossSpawned;
+    private bool bossMode;
 
     private void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour
         isGameOn = true;
         boss = false;
         isBossSpawned = false;
+        bossMode = false;
     }
 
     // Start is called before the first frame update
@@ -52,6 +56,16 @@ public class GameManager : MonoBehaviour
         StartCoroutine(spawner());
         StartCoroutine(powerUpSpawner());
         InvokeRepeating("enemySpeedUp", 0.1f, 12.5f);
+
+        if (PlayerPrefs.HasKey("SS-Boss"))
+            if (PlayerPrefs.GetString("SS-Boss").Equals("true"))
+                bossMode = true;
+
+        if (PlayerPrefs.HasKey("SS-TBP"))
+            bossScore = PlayerPrefs.GetInt("SS-TBP");
+        else
+            bossScore = 60;
+
     }
 
     
@@ -92,7 +106,7 @@ public class GameManager : MonoBehaviour
         score += 1;
         UIManager.instance.UpdateUI();
 
-        if( score >= bossScore && !isBossSpawned)
+        if(bossMode && score >= bossScore && !isBossSpawned)
         {
             StartCoroutine(bossFlagSwitch());
             isBossSpawned = true;

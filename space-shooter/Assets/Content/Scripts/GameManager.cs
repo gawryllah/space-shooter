@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public bool boss;
     public bool isBossSpawned;
-    private bool bossMode;
+    public bool bossMode;
 
     private void Awake()
     {

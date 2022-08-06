@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(0);
+        SoundManager.instance.SetBgMusic();
         Time.timeScale = 1f;
     }
 

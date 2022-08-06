@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
         if (score > hiScore)
             saveScore();
         Time.timeScale = 0f;
-
+        SoundManager.instance.PlayGameOverSound();
         UIManager.instance.ShowGameOverUI();
         StopAllCoroutines();
     }
@@ -155,12 +155,14 @@ public class GameManager : MonoBehaviour
             saveScore();
         Time.timeScale = 0f;
 
+        SoundManager.instance.PlayVictorySound();
         UIManager.instance.ShowWinUI();
         StopAllCoroutines();
     }
 
     void spawnBoss()
     {
+        SoundManager.instance.SetClip(SoundManager.instance.audios[1]);
         Instantiate(bossPrefab);
     }
 

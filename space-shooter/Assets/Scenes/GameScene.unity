@@ -585,6 +585,7 @@ MonoBehaviour:
   maxRespDelay: 3.92
   score: 0
   hiScore: 0
+  bossScore: 0
   bgScrollingSpeed: 1.5
   powerUps:
   - {fileID: 3463915774234510374, guid: f097a28a7dec08d4183db26f8bd46121, type: 3}
@@ -594,6 +595,7 @@ MonoBehaviour:
   bossPrefab: {fileID: 7994637056778095549, guid: d0bc809b74bee21459c8cf3a9cfce2c2, type: 3}
   boss: 0
   isBossSpawned: 0
+  bossMode: 0
 --- !u!4 &305235429
 Transform:
   m_ObjectHideFlags: 0
@@ -842,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXIT
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1770,7 +1772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXIT
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

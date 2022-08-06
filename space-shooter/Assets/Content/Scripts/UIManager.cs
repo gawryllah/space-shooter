@@ -56,15 +56,14 @@ public class UIManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameScene");
         SoundManager.instance.SetBgMusic();
         Time.timeScale = 1f;
     }
 
     public void GameExit()
     {
-        Debug.Log("Game is shutting down...");
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ShowGameOverUI()

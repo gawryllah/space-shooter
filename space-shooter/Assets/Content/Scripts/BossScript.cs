@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,11 @@ public class BossScript : MonoBehaviour
 
     private bool autoShooted;
 
+    AudioSource audioSource;
+
+    private Color currColor;
+    private SpriteRenderer sr;
+
 
 
     // Start is called before the first frame update
@@ -25,8 +31,11 @@ public class BossScript : MonoBehaviour
     {
         
         animator = GetComponent<Animator>();
-
         hpBarSlider = hpBar.GetComponent<Slider>();
+        audioSource = GetComponent<AudioSource>();
+        sr = GetComponent<SpriteRenderer>();
+        currColor = sr.color;
+
         hpBarSlider.maxValue = hp;
         hpBarSlider.value = hp;
         autoShooted = false;
@@ -59,6 +68,8 @@ public class BossScript : MonoBehaviour
 
     private void takeDmg()
     {
+        StartCoroutine(dmgEffect());
+        audioSource.Play();
         hp--;
         hpBarSlider.value = hp;
         if (hp <= 0)
@@ -145,7 +156,7 @@ public class BossScript : MonoBehaviour
 
     IEnumerator autoShooting(float duration)
     {
-   
+
         var end = Time.time + duration;
         while (Time.time < end && GameManager.instance.isGameOn)
         {
@@ -153,9 +164,21 @@ public class BossScript : MonoBehaviour
             shoot();
             yield return new WaitForSecondsRealtime(0.25f);
         }
-        
+
     }
 
+    IEnumerator dmgEffect()
+    {
+        
+
+        sr.color = Color.red;
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        sr.color = currColor;
+    }
+
+   
     
 
 

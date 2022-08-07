@@ -113,8 +113,6 @@ public class MainMenuManager : MonoBehaviour
 
         bossModeSpec.SetActive(true);
         newGameViewButtons.SetActive(false);
-
-        //StartGame();
     }
 
     public void ArcadeMode()

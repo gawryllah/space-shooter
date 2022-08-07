@@ -36,6 +36,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
+        Time.timeScale = 1f;
     }
 
     public void RestHiScore()

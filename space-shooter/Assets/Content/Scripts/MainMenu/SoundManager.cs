@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    
     }
 
     // Start is called before the first frame update
@@ -36,7 +37,14 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
+    }
+
+    public void SetClipNoFade(AudioClip audio)
+    {
+        audioSource.Stop();
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 
     public void SetClip(AudioClip audio)

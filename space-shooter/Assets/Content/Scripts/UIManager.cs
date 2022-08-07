@@ -64,6 +64,7 @@ public class UIManager : MonoBehaviour
     public void GameExit()
     {
         SceneManager.LoadScene("MainMenu");
+        SoundManager.instance.SetBgMusic();
     }
 
     public void ShowGameOverUI()

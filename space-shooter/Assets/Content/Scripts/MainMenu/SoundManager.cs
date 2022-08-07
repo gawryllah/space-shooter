@@ -37,7 +37,14 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (audioSource.clip == audios[0])
+        {
+            audioSource.loop = true;
+        }
+        else
+        {
+            audioSource.loop = false;
+        }
     }
 
     public void SetClipNoFade(AudioClip audio)

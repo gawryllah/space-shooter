@@ -5,13 +5,21 @@ using UnityEngine;
 public class PowerUpScript : MonoBehaviour
 {
 
+    private SpriteRenderer sr;
+
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         StartCoroutine(floating());
     }
 
     private void FixedUpdate()
     {
+        if (GameManager.instance.isBossSpawned && !sr.isVisible) {
+            Debug.Log($"Status: {GameManager.instance.isBossSpawned && !sr.isVisible}, at {this}.");
+            Destroy(gameObject);
+        }
+
         if (!GameManager.instance.isGameOn)
             StopAllCoroutines();
 

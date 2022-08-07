@@ -16,9 +16,6 @@ public class EnemyScript : MonoBehaviour
 
     private SpriteRenderer sr;
    
-
-
-
     PolygonCollider2D polygonCollider2d;
     // Start is called before the first frame update
     void Start()
@@ -32,13 +29,15 @@ public class EnemyScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        if (canMove)
-            transform.position -= new Vector3((speed * Time.deltaTime) , 0f);
+        if (GameManager.instance.isBossSpawned && !sr.isVisible)
+            Destroy(transform.gameObject);
 
-        if(transform.position.x < -10.5f)
+        if (canMove)
+            transform.position -= new Vector3((speed * Time.deltaTime), 0f);
+
+        if (transform.position.x < -10.5f)
         {
             Destroy(transform.gameObject);
             PlayerController.takeDmg();

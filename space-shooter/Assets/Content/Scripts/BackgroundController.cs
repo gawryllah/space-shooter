@@ -58,7 +58,7 @@ public class BackgroundController : MonoBehaviour
         while (GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
         {
             yield return new WaitForSecondsRealtime(Random.Range(12f, 22f));
-            if (Random.Range(0f, 1f) < 0.68f)
+            if (Random.Range(0f, 1f) < 0.68f && GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
             {
                 GameObject go = Instantiate(planetPlaceHolder, new Vector3(12, GameManager.instance.getRandomHeight() + 1), Quaternion.identity);
                 float scale = Random.Range(0.6f, 1f);
@@ -67,7 +67,7 @@ public class BackgroundController : MonoBehaviour
 
                 //Debug.Log("Spawned planet");
             }
-            else
+            else if(GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
             {
                 if (Random.Range(0f, 1f) > 0.55f)
                 {

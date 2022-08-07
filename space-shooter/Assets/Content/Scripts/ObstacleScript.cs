@@ -21,6 +21,10 @@ public class ObstacleScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if (GameManager.instance.isBossSpawned && !sr.isVisible)
+            Destroy(gameObject);
+
         transform.position -= new Vector3((speed * Time.deltaTime), 0f);
 
 

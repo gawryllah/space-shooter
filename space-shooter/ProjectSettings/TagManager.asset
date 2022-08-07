@@ -12,6 +12,8 @@ TagManager:
   - Ammo
   - Weapon
   - Boss
+  - Asteroid
+  - Planet
   layers:
   - Default
   - TransparentFX

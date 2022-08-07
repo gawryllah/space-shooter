@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    
-
     [SerializeField]
     float movmentSpeed;
 
@@ -22,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private float offScale = 3f;
 
     public GameObject immortalityPrefab;
+    private GameObject immortalityGO;
+
     private bool immortal;
 
     private bool autoShootingOn;
@@ -135,10 +134,10 @@ public class PlayerController : MonoBehaviour
     private IEnumerator immortalityHandler()
     {
         
-        GameObject go =  Instantiate(immortalityPrefab, transform.position, Quaternion.identity);
-        go.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
-        go.transform.localScale = new Vector3(4.16f, 4.16f, 4.16f);
-        SpriteRenderer gosr = go.GetComponent<SpriteRenderer>();
+        immortalityGO = Instantiate(immortalityPrefab, transform.position, Quaternion.identity);
+        immortalityGO.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
+        immortalityGO.transform.localScale = new Vector3(4.16f, 4.16f, 4.16f);
+        SpriteRenderer gosr = immortalityGO.GetComponent<SpriteRenderer>();
         Color gosrColor = gosr.color;
         immortal = true;
         yield return new WaitForSecondsRealtime(7f);
@@ -152,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //yield return new WaitForSecondsRealtime(2f);
-        Destroy(go);
+        Destroy(immortalityGO);
         immortal = false;
     }
 
@@ -160,11 +159,22 @@ public class PlayerController : MonoBehaviour
     {
         autoShootingOn = true;
         var end = Time.time + duration;
-        while (Time.time < end && GameManager.instance.isGameOn)
+        while (Time.time < end && GameManager.instance.isGameOn && autoShootingOn)
         { 
             shoot();
             yield return new WaitForSecondsRealtime(0.15f);
         }
         autoShootingOn = false;
+    }
+
+    public void turnOffPowerups()
+    {
+        autoShootingOn = false;
+        immortal = false;
+
+        StopCoroutine(autoShooting(8f));
+        StopCoroutine(immortalityHandler());
+
+        Destroy(immortalityGO);
     }
 }

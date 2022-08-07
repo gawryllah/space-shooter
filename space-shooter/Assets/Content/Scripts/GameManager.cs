@@ -106,12 +106,7 @@ public class GameManager : MonoBehaviour
         score += 1;
         UIManager.instance.UpdateUI();
 
-        if(bossMode && score >= bossScore && !isBossSpawned)
-        {
-            StartCoroutine(bossFlagSwitch());
-            isBossSpawned = true;
-            canSpawn = false;
-        }
+        canBossSpawn();
     }
 
     private void setScore()
@@ -210,12 +205,27 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator bossFlagSwitch()
     {
+
         yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 && 
                                             FindObjectsOfType<BGParticleScript>().Length == 0 && FindObjectsOfType<PowerUpScript>().Length == 0 && FindObjectsOfType<AsteroidScript>().Length == 0);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().turnOffPowerups();
         boss = true;
         spawnBoss();
         UIManager.instance.tillBossText.enabled = false;
         StopAllCoroutines();
+    }
+
+    void canBossSpawn()
+    {
+
+        if (bossMode && score >= bossScore && !isBossSpawned)
+        {
+            isBossSpawned = true;
+            canSpawn = false;
+            StartCoroutine(bossFlagSwitch());
+
+        }
+
     }
 
   

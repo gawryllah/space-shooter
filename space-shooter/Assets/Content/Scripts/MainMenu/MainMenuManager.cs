@@ -27,12 +27,6 @@ public class MainMenuManager : MonoBehaviour
         StartCoroutine(logoAnim());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");

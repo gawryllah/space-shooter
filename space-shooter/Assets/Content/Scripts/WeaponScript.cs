@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
@@ -11,10 +9,10 @@ public class WeaponScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
         transform.position -= new Vector3(speed * Time.deltaTime, 0);
 
-        if(transform.position.x < -12f)
+        if (transform.position.x < -12f)
         {
             Destroy(transform.gameObject);
         }

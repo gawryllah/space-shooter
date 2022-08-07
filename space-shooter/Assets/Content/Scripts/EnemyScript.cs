@@ -15,7 +15,7 @@ public class EnemyScript : MonoBehaviour
     private GameObject explosion;
 
     private SpriteRenderer sr;
-   
+
     PolygonCollider2D polygonCollider2d;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-      
+
 
     }
 
@@ -58,8 +58,8 @@ public class EnemyScript : MonoBehaviour
             explosion = Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
             Destroy(explosion.transform.gameObject, 0.6f);
             StartCoroutine(fadeAway());
-            
-            
+
+
 
             GameManager.instance.addPoint();
         }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,7 +28,7 @@ public class BossScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         animator = GetComponent<Animator>();
         hpBarSlider = hpBar.GetComponent<Slider>();
         audioSource = GetComponent<AudioSource>();
@@ -151,7 +150,7 @@ public class BossScript : MonoBehaviour
         StartCoroutine(attack());
         PlayerController.canShoot = true;
         StartCoroutine(LerpPosition(new Vector2(transform.position.x, Random.Range(-4f, 3.65f))));
-        
+
     }
 
     IEnumerator autoShooting(float duration)
@@ -169,7 +168,7 @@ public class BossScript : MonoBehaviour
 
     IEnumerator dmgEffect()
     {
-        
+
 
         sr.color = Color.red;
 
@@ -178,8 +177,8 @@ public class BossScript : MonoBehaviour
         sr.color = currColor;
     }
 
-   
-    
+
+
 
 
 }

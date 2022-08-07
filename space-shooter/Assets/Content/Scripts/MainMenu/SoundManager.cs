@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    
+
     }
 
     // Start is called before the first frame update
@@ -90,7 +90,7 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.Stop();
         audioSource.clip = audios[2];
-        audioSource.Play(); 
+        audioSource.Play();
     }
 
 
@@ -108,7 +108,16 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
 
-    
+    public void AudioSourceToggle()
+    {
+        audioSource.enabled = !audioSource.enabled;
+    }
+
+    public void ChangeVolume(float volumeValue)
+    {
+        AudioListener.volume = volumeValue;
+    }
+
 }
 
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpScript : MonoBehaviour
@@ -15,7 +14,8 @@ public class PowerUpScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.instance.isBossSpawned && !sr.isVisible) {
+        if (GameManager.instance.isBossSpawned && !sr.isVisible)
+        {
             Debug.Log($"Status: {GameManager.instance.isBossSpawned && !sr.isVisible}, at {this}.");
             Destroy(gameObject);
         }

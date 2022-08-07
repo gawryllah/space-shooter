@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour
@@ -38,12 +37,13 @@ public class ObstacleScript : MonoBehaviour
 
     private IEnumerator colorChanger()
     {
-        while (true) { 
+        while (true)
+        {
             yield return new WaitForSecondsRealtime(1.5f);
             sr.color = Color.Lerp(currColor, Color.red, 1.25f);
             yield return new WaitForSecondsRealtime(1.5f);
             sr.color = Color.Lerp(Color.red, currColor, 1.25f);
         }
     }
-    
+
 }

@@ -40,7 +40,7 @@ public class BackgroundController : MonoBehaviour
         bg2.transform.position -= new Vector3(GameManager.instance.bgScrollingSpeed * Time.deltaTime, 0f);
         bg3.transform.position -= new Vector3(GameManager.instance.bgScrollingSpeed * Time.deltaTime, 0f);
 
-        if(bg1.transform.position.x < -14f)
+        if (bg1.transform.position.x < -14f)
         {
             var bgObj = Instantiate(backgroundObj[(int)Random.Range(0, backgroundObj.Count)], new Vector3(15f, 0), Quaternion.identity);
 
@@ -67,7 +67,7 @@ public class BackgroundController : MonoBehaviour
 
                 //Debug.Log("Spawned planet");
             }
-            else if(GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
+            else if (GameManager.instance.isGameOn && !GameManager.instance.isBossSpawned)
             {
                 if (Random.Range(0f, 1f) > 0.55f)
                 {
@@ -83,7 +83,7 @@ public class BackgroundController : MonoBehaviour
                 }
 
             }
-            
+
 
         }
 

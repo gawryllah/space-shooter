@@ -85,26 +85,28 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.GameOver();
         }
-        else if (collision.gameObject.tag.Equals("Heart") && health < maxHealth) 
+        else if (collision.gameObject.tag.Equals("Heart") && health < maxHealth)
         {
             Destroy(collision.gameObject);
             health++;
             //Debug.Log($"Health: {health}");
             UIManager.instance.AddHeart();
 
-        }else if (collision.gameObject.tag.Equals("Immortality"))
+        }
+        else if (collision.gameObject.tag.Equals("Immortality"))
         {
             Destroy(collision.gameObject);
             StartCoroutine(immortalityHandler());
 
-        }else if(collision.gameObject.tag.Equals("Ammo"))
+        }
+        else if (collision.gameObject.tag.Equals("Ammo"))
         {
             Destroy(collision.gameObject);
             StartCoroutine(autoShooting(8f));
 
         }
 
-        
+
     }
 
     public static void takeDmg()
@@ -114,9 +116,9 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             GameManager.instance.GameOver();
-            
+
         }
-            
+
     }
 
     private void turnOnEngine()
@@ -133,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator immortalityHandler()
     {
-        
+
         immortalityGO = Instantiate(immortalityPrefab, transform.position, Quaternion.identity);
         immortalityGO.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
         immortalityGO.transform.localScale = new Vector3(4.16f, 4.16f, 4.16f);
@@ -160,7 +162,7 @@ public class PlayerController : MonoBehaviour
         autoShootingOn = true;
         var end = Time.time + duration;
         while (Time.time < end && GameManager.instance.isGameOn && autoShootingOn)
-        { 
+        {
             shoot();
             yield return new WaitForSecondsRealtime(0.15f);
         }

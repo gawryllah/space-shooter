@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
 
     public bool isGameOn;
 
@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
 
         EnemyScript.speed = EnemyScript.baseSpeed;
         setScore();
@@ -68,21 +69,22 @@ public class GameManager : MonoBehaviour
 
     }
 
-    
+
 
     private IEnumerator spawner()
     {
         while (isGameOn)
         {
             yield return new WaitForSecondsRealtime(randomDel);
-            if(isGameOn && canSpawn)
+            if (isGameOn && canSpawn)
                 spawnEnemy();
         }
     }
 
     void spawnEnemy()
     {
-        if (isGameOn) {
+        if (isGameOn)
+        {
             Instantiate(enemyPrefab, new Vector3(12, randomHeight), Quaternion.identity);
 
             setRandomDelay();
@@ -176,9 +178,9 @@ public class GameManager : MonoBehaviour
             bgScrollingSpeed *= 1.05f;
             //Debug.Log($"bg speed: {bgScrollingSpeed}");
 
-            if(maxRespDelay > 2f)
+            if (maxRespDelay > 2f)
             {
-                maxRespDelay -= 0.2f; 
+                maxRespDelay -= 0.2f;
             }
         }
     }
@@ -187,7 +189,7 @@ public class GameManager : MonoBehaviour
     {
         while (isGameOn && !isBossSpawned)
         {
-          
+
             yield return new WaitForSecondsRealtime(Random.Range(13 + PlayerController.health, 22 + PlayerController.health));
 
             if (PlayerController.health < PlayerController.maxHealth)
@@ -196,7 +198,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if(powerUps.Length > 1)
+                if (powerUps.Length > 1)
                     Instantiate(powerUps[Mathf.RoundToInt(Random.Range(1f, (float)powerUps.Length - 1))], new Vector3(13f, randomHeight), Quaternion.identity);
             }
             //Debug.Log($"Spawned powerup");
@@ -206,7 +208,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator bossFlagSwitch()
     {
 
-        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 && 
+        yield return new WaitUntil(() => FindObjectsOfType<EnemyScript>().Length == 0 && FindObjectsOfType<ObstacleScript>().Length == 0 &&
                                             FindObjectsOfType<BGParticleScript>().Length == 0 && FindObjectsOfType<PowerUpScript>().Length == 0 && FindObjectsOfType<AsteroidScript>().Length == 0);
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().turnOffPowerups();
         boss = true;
@@ -228,5 +230,5 @@ public class GameManager : MonoBehaviour
 
     }
 
-  
+
 }

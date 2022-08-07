@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +19,10 @@ public class MainMenuManager : MonoBehaviour
     public GameObject howToPlayView;
     public GameObject instructionView;
 
+    public Button bgMusicToggle;
+
+    public Slider volumeSlider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,9 @@ public class MainMenuManager : MonoBehaviour
 
         logoColor = logo.color;
         StartCoroutine(logoAnim());
+
+        if (PlayerPrefs.HasKey("SS-volume"))
+            volumeSlider.value = PlayerPrefs.GetFloat("SS-volume");
     }
 
     public void StartGame()
@@ -90,6 +97,12 @@ public class MainMenuManager : MonoBehaviour
         menu.SetActive(true);
     }
 
+    public void ToggleBgMusic()
+    {
+        SoundManager.instance.AudioSourceToggle();
+        bgMusicToggle.GetComponentInChildren<TMP_Text>().text = SoundManager.instance.audioSource.enabled ? "BG Music: ON" : "BG Music: OFF";
+    }
+
 
 
     public void BossMode()
@@ -127,6 +140,13 @@ public class MainMenuManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.8f);
             logo.color = logoColor;
         }
-        
+
+    }
+
+    public void ChangeVolume()
+    {
+        SoundManager.instance.ChangeVolume(volumeSlider.value);
+
+        PlayerPrefs.SetFloat("SS-volume", volumeSlider.value);
     }
 }

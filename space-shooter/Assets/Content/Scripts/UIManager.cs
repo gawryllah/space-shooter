@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,7 +24,7 @@ public class UIManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
+
         }
     }
 
@@ -46,7 +44,7 @@ public class UIManager : MonoBehaviour
     {
         scoreText.text = $"Score: {GameManager.instance.score}";
         tillBossText.text = $"Till Boss: {(GameManager.instance.bossScore - GameManager.instance.score < 0 ? "0" : GameManager.instance.bossScore - GameManager.instance.score)}";
-        
+
     }
 
     public void SetHiScore()
@@ -89,7 +87,7 @@ public class UIManager : MonoBehaviour
         var obj = Instantiate(hearts.transform.GetChild(0));
         obj.SetParent(hearts.gameObject.transform);
 
-        for(int i = 0; i < hearts.transform.childCount; i++)
+        for (int i = 0; i < hearts.transform.childCount; i++)
         {
             hearts.transform.GetChild(i).localScale = new Vector3(1f, 1f, 1f);
         }

@@ -14,6 +14,7 @@ public class BossScript : MonoBehaviour
     public int hp;
 
     public bool canMove;
+    private bool immortal;
     private float duration;
 
     private bool autoShooted;
@@ -38,6 +39,7 @@ public class BossScript : MonoBehaviour
         hpBarSlider.maxValue = hp;
         hpBarSlider.value = hp;
         autoShooted = false;
+        immortal = true;
         StartCoroutine(showOnScene(4f));
     }
 
@@ -45,7 +47,7 @@ public class BossScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Bullet"))
+        if (collision.gameObject.tag.Equals("Bullet") && !immortal)
         {
             Destroy(collision.gameObject);
             takeDmg();
@@ -148,6 +150,7 @@ public class BossScript : MonoBehaviour
 
 
         StartCoroutine(attack());
+        immortal = false;
         PlayerController.canShoot = true;
         StartCoroutine(LerpPosition(new Vector2(transform.position.x, Random.Range(-4f, 3.65f))));
 

@@ -15,13 +15,18 @@ public class MainMenuManager : MonoBehaviour
 
     public GameObject newGameViewButtons;
     public GameObject bossModeSpec;
+
+    public GameObject howToPlayView;
+    public GameObject instructionView;
+
     // Start is called before the first frame update
     void Start()
     {
         menu.SetActive(true);
         newGameView.SetActive(false);
-        //newGameViewButtons.SetActive(false);
         bossModeSpec.SetActive(false);
+        howToPlayView.SetActive(false);
+        instructionView.SetActive(false);
 
         logoColor = logo.color;
         StartCoroutine(logoAnim());
@@ -48,6 +53,19 @@ public class MainMenuManager : MonoBehaviour
         menu.SetActive(false);
         newGameView.SetActive(true);
     }
+
+    public void GoToHowToPlay()
+    {
+        menu.SetActive(false);
+        howToPlayView.SetActive(true);
+    }
+
+    public void GoToInstruction()
+    {
+        howToPlayView.SetActive(false);
+        instructionView.SetActive(true);
+    }
+
     public void GoBackNewGameToMenu()
     {
         menu.SetActive(true);
@@ -58,6 +76,18 @@ public class MainMenuManager : MonoBehaviour
     {
         bossModeSpec.SetActive(false);
         newGameViewButtons.SetActive(true);
+    }
+
+    public void GoBackToHowToPlay()
+    {
+        howToPlayView.SetActive(true);
+        instructionView.SetActive(false);
+    }
+
+    public void GoBackHTPtoMainMenu()
+    {
+        howToPlayView.SetActive(false);
+        menu.SetActive(true);
     }
 
 
@@ -83,7 +113,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void SetTillBossPoints(string points)
     {
-        Debug.Log(points.ToString());
+        //Debug.Log(points.ToString());
         PlayerPrefs.SetInt("SS-TBP", int.Parse(points.ToString()));
     }
 

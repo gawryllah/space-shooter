@@ -199,7 +199,7 @@ public class GameManager : MonoBehaviour
                 if(powerUps.Length > 1)
                     Instantiate(powerUps[Mathf.RoundToInt(Random.Range(1f, (float)powerUps.Length - 1))], new Vector3(13f, randomHeight), Quaternion.identity);
             }
-            Debug.Log($"Spawned powerup");
+            //Debug.Log($"Spawned powerup");
         }
     }
 
